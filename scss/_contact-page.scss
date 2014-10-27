@@ -1,0 +1,9 @@
+.nav-smaller nav {
+  @include breakpoint {
+    background-color: $alphaColor;
+    height: 3rem;
+  }
+}
+.nav-smaller .nav-list {
+  margin-top: $tiny;
+}

@@ -1,0 +1,8 @@
+$largeScreen : 'screen and (min-width:800px)';
+
+@mixin breakpoint {
+  @media #{$largeScreen} {
+    @content;
+  }
+}
+

@@ -1,0 +1,104 @@
+.portfolio-background-img {
+  @extend .background-img;
+  background-image: url("../img/bg-portfolio.jpg");
+  height: 200px;
+  background-position: center -100px;
+  background-size: auto;
+  @include breakpoint {
+    height: 400px;
+  }
+}
+
+.work-sample {
+  margin-top: $larger;
+  clear: both;
+  h1, h2 {
+    text-align: left;
+  }
+}
+
+.work-sample-img img {
+  width: 100%;
+}
+.work-sample-thumbnails {
+  li {
+    @extend .grid_3;
+    overflow: hidden;
+    height: $gigantic;
+
+    &:nth-child(4n+1) {
+      @extend .alpha;
+    }
+    &:nth-child(4n) {
+      @extend .omega;
+   }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.work-sample-tags {
+  font-weight: 700;
+  color: $betaColor;
+  line-height: $large;
+  span {
+    background-color: lighten($betaColor, 10%);
+    font-weight: 300;
+    color: #FFF;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-left: -1px;
+  }
+}
+
+.work-sample-links {
+  clear:both;
+  .button-dark {
+    width: 48%;
+    float:left;
+    margin: 0 1% 0 0;
+  }
+}
+
+.graphicDesign {
+  background-color: $betaColorBeta;
+}
+
+.performanceArt {
+  li:nth-child(6n+1) {
+    @extend .alpha;
+  }
+  li:nth-child(6n) {
+    @extend .omega;
+  }
+  li {
+    @extend .grid_2;
+    overflow: hidden;
+    height: $gigantic;
+  }
+  img {
+    width: 125%;
+  }
+}
+
+#lightbox {
+    position:fixed;
+    overflow-y: scroll;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    text-align:center;
+}
+#lightbox p {
+    text-align:right;
+    color:#fff;
+    margin-right:20px;
+    font-size:12px;
+}
+#lightbox img {
+    border: $tiny solid #FFF;
+    max-height: 700px;
+}
