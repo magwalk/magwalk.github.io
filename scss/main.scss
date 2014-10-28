@@ -1,46 +1,5 @@
-@import "mixins";
-@import "icon-fonts";
-@import "functions";
-@import "theme";
-@import "reset";
-@import "grid";
-@import "patterns";
+@import "base/manifest";
+@import "layout/manifest";
+@import "module/manifest";
 @import "home";
-@import "contact-page";
 @import "portfolio";
-//@import "resume-page";
-
-// Define Universal buttons and links here
-.container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  @mixin breakpoint {
-    width:80%;
-  }
-}
-
-footer {
-  padding: $normal;
-  background-color: $alphaColor;
-  width: 100%;
-  height: 20rem;
-  position: relative;
-  color: #FFF;
-}
-.contact li, .contact h1{
-  color: $betaColorBeta;
-  text-align: center;
-}
-
-.footer-text {
-  display: block;
-  margin: $normal auto;
-  font-style: normal;
-}
-.footer-text p {
-  color: $betaColorBeta;
-  font-size: $small;
-  line-height: $normal;
-  text-align: center;
-}

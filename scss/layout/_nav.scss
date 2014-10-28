@@ -1,0 +1,149 @@
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: -100%;
+  background-color: $alphaColorBeta;
+  z-index: 2;
+  padding: 0;
+  transition: top 1s;
+  @include breakpoint {
+    top: 0;
+    background-color: transparent;
+    border-top: 5px solid $alphaColorBeta;
+  }
+}
+
+.portfolio-background-img nav {
+  top: -150%;
+  @include breakpoint {
+    top: 0;
+  }
+}
+
+
+.expand {
+  top: 0;
+}
+
+.nav-icon {
+  width: $larger;
+  height: $larger;
+  position: absolute;
+  top: 0;
+  right: $normal;
+  z-index: 3;
+  @include breakpoint {
+    display: none;
+  }
+}
+
+.nav-icon img {
+  width: 100%;
+}
+
+.nav-list {
+  width: 100%;
+  margin-top: $larger;
+  text-align: left;
+
+}
+
+.nav-list_item, .nav-list_item_sub {
+  background-color: $betaColorBeta;
+  border-bottom: 1px solid #FFF;
+  padding: 0 $normal;
+  line-height: $larger;
+  &:hover {
+    background-color: darken($betaColorBeta, 10%);
+    text-shadow: 1px 1px 0px darken($betaColor, 10%);
+    transition: background-color 0.3s, text-shadow 0.3s;
+  }
+  @include breakpoint {
+    background-color: rgba(255,255,255,0);
+    border-bottom: 0;
+    display: inline;
+    text-align: center;
+    line-height: $normal;
+    padding: $tiny;
+    color: #FFF;
+    &:hover{
+      background-color: rgba(255,255,255,0);
+      text-shadow: 1px 1px 0px $alphaColor;
+    }
+  }
+}
+.nav-list a {
+  color: $betaColor;
+  padding: $tiny;
+  @include breakpoint {
+    color: $deltaColorCharlie;
+  }
+}
+
+.nav-list_item_sub a {
+  font-weight: 300;
+  padding-left: 33px;
+  @include breakpoint {
+    line-height: $large;
+  }
+}
+
+.nav-list_item {
+  width: 100%;
+  float: left;
+  display: block;
+  @include breakpoint {
+    width: 18%;
+    margin: 0 1% 1% 1%;
+  }
+}
+
+.nav-list_item_sub {
+  background-color: rgba(255,255,255,0);
+  @include breakpoint {
+    text-align: left;
+    padding-left: 10%;
+    display: block;
+  }
+}
+.first {
+  @include breakpoint {
+    margin-top: $small;
+  }
+}
+.nav-list_sub {
+  @include breakpoint {
+    width: 23.5%;
+    position: absolute;
+    visibility: hidden;
+    color: #FFF;
+    text-shadow: none;
+    text-align: left;
+  }
+}
+
+.portfolio {
+  @include breakpoint {
+    background-color: rgba(255,255,255,0);
+    &:hover{
+      .nav-list_sub {
+        visibility: visible;
+        transition: visibility 0.5s;
+      }
+    }
+  }
+}
+.social-media {
+  text-align: center;
+  &:hover {
+    text-shadow: none;
+  }
+}
+.social-media_icon {
+  color: white;
+  &:hover{
+    text-shadow: 2px 2px 0px $alphaColor;
+  }
+}
+

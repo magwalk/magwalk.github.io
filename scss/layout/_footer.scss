@@ -1,0 +1,24 @@
+footer {
+  padding: $normal;
+  background-color: $alphaColor;
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  color: #FFF;
+}
+.contact li, .contact h1 {
+  color: $betaColorBeta;
+  text-align: center;
+}
+
+.footer-text {
+  display: block;
+  margin: $normal auto;
+  font-style: normal;
+}
+.footer-text p {
+  color: $betaColorBeta;
+  font-size: $small;
+  line-height: $normal;
+  text-align: center;
+}
