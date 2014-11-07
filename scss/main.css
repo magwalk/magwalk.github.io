@@ -80,6 +80,7 @@ Grid System
 /* Mobile Grid Resets all Columns to 100%*/
 .grid_1 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -89,6 +90,7 @@ Grid System
 
 .grid_2, .performanceArt li {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -98,6 +100,7 @@ Grid System
 
 .grid_3, .work-sample-thumbnails li {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -107,6 +110,7 @@ Grid System
 
 .grid_4, .process {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -116,6 +120,7 @@ Grid System
 
 .grid_5 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -125,6 +130,7 @@ Grid System
 
 .grid_6 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -134,6 +140,7 @@ Grid System
 
 .grid_7 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -143,6 +150,7 @@ Grid System
 
 .grid_8 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -152,6 +160,7 @@ Grid System
 
 .grid_9 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -161,6 +170,7 @@ Grid System
 
 .grid_10 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -170,6 +180,7 @@ Grid System
 
 .grid_11 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -179,6 +190,7 @@ Grid System
 
 .grid_12 {
   width: 100%;
+  margin-bottom: 2%;
   float: left;
   display: block; }
   @media screen and (min-width: 800px) {
@@ -528,7 +540,7 @@ header {
   padding-bottom: 1rem; }
 
 .process {
-  height: 6.854rem; }
+  margin-bottom: 1rem; }
 
 .heading-icon {
   color: #826F84;
@@ -586,11 +598,22 @@ header {
 .work-sample-img img {
   width: 100%; }
 
-.work-sample-thumbnails li {
-  overflow: hidden;
-  height: 6.854rem; }
-  .work-sample-thumbnails li img {
-    width: 100%; }
+.work-sample-thumbnails {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .work-sample-thumbnails {
+      display: block; } }
+  .work-sample-thumbnails li {
+    overflow: hidden;
+    height: 6.854rem; }
+    .work-sample-thumbnails li img {
+      width: 100%; }
+
+.work-sample-thumbnails_title {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .work-sample-thumbnails_title {
+      display: block; } }
 
 .work-sample-tags {
   font-weight: 700;
@@ -607,9 +630,13 @@ header {
 .work-sample-links {
   clear: both; }
   .work-sample-links .button-dark {
-    width: 48%;
     float: left;
-    margin: 0 1% 0 0; }
+    width: 100%;
+    margin: 0 0 1% 0; }
+    @media screen and (min-width: 800px) {
+      .work-sample-links .button-dark {
+        width: 48%;
+        margin: 0 1% 0 0; } }
 
 .graphicDesign {
   background-color: #E3DFDD; }

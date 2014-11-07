@@ -83,7 +83,7 @@ header{
 }
 .process {
   @extend .grid_4;
-  height: $gigantic;
+  margin-bottom: $normal;
 }
 .heading-icon {
   color: $alphaColorBeta;
