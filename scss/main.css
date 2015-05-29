@@ -300,7 +300,7 @@ html .clearfix, *:first-child + html .clearfix {
   overflow: hidden; }
 
 footer {
-  padding: 1rem;
+  padding: 2.618rem;
   background-color: #634B65;
   width: 100%;
   height: 20rem;
@@ -449,24 +449,24 @@ nav {
 
 .button-dark {
   color: #FFF;
-  display: block;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 2.618rem;
   letter-spacing: 2px;
-  padding-top: 0.381rem;
   background-color: #634B65;
   border-bottom: 4px solid #382a39;
   text-shadow: 1px 1px 0px #382a39;
   text-align: center;
-  vertical-align: center;
-  width: 100%;
   height: 2.618rem;
-  clear: both; }
+  transition: all 0.3s;
+  box-sizing: border-box; }
   .button-dark:hover {
     background-color: #382a39;
-    border-bottom: 4px solid #1b151c;
-    text-shadow: 1px 1px 0px #382a39;
-    transition: background-color 0.3s, border-bottom 0.3s, text-shadow 0.3s; }
+    border-bottom: 2.618rem solid #382a39; }
+  .button-dark.full-width {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; }
 
 .background-img, .portfolio-background-img {
   width: 100%;
@@ -493,35 +493,31 @@ header {
   text-align: center;
   padding-top: 1rem;
   float: none; }
-
-.header-logo a {
-  display: inline-block;
-  width: 6.854rem;
-  height: 6.854rem;
-  z-index: 5; }
-
-.header-logo img {
-  display: inline-block;
-  width: 6.854rem; }
+  .header-logo a {
+    display: inline-block;
+    width: 6.854rem;
+    height: 6.854rem;
+    z-index: 5; }
+  .header-logo img {
+    display: inline-block;
+    width: 6.854rem; }
 
 .header-blurb {
   text-align: center;
   margin: 0 auto;
   float: none; }
-
-.header-blurb h1, li {
-  letter-spacing: 1px;
-  font-weight: 300;
-  line-height: 2.618rem; }
-  @media screen and (min-width: 800px) {
-    .header-blurb h1, li {
-      line-height: 4.236rem; } }
-
-.header-blurb h1 {
-  color: #FFF; }
-  @media screen and (min-width: 800px) {
-    .header-blurb h1 {
-      font-size: 2.618rem; } }
+  .header-blurb h1, .header-blurb li {
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 2.618rem; }
+    @media screen and (min-width: 800px) {
+      .header-blurb h1, .header-blurb li {
+        line-height: 4.236rem; } }
+  .header-blurb h1 {
+    color: #FFF; }
+    @media screen and (min-width: 800px) {
+      .header-blurb h1 {
+        font-size: 2.618rem; } }
 
 .header-blurb li {
   color: #A7A3AB; }
@@ -529,8 +525,7 @@ header {
 .content {
   width: 100%;
   position: relative;
-  padding-top: 1.618rem;
-  padding-bottom: 2.618rem;
+  padding: 2.618rem 0;
   text-align: center; }
 
 .content-p {
@@ -546,7 +541,7 @@ header {
   color: #826F84;
   vertical-align: sub;
   font-size: 1rem;
-  margin-bottom: 0.381rem; }
+  margin-bottom: 0.618rem; }
 
 .heading-icon span {
   color: #AE8875;
@@ -557,21 +552,28 @@ header {
 
 .portfolio-samples {
   background-color: #E3DFDD; }
+  .portfolio-samples .heading-icon {
+    margin-bottom: 2.618rem; }
 
-.portfolio-samples_section {
+section.portfolio-samples_section {
   margin-bottom: 2.618rem; }
-  .portfolio-samples_section h2 {
+  section.portfolio-samples_section h2 {
+    margin-bottom: 0.618rem;
     font-size: 1rem;
     color: #634B65;
     text-align: left; }
     @media screen and (min-width: 800px) {
-      .portfolio-samples_section h2 {
+      section.portfolio-samples_section h2 {
         font-size: 1rem; } }
-  .portfolio-samples_section figure {
+  section.portfolio-samples_section figure {
     overflow: hidden; }
-  .portfolio-samples_section img {
+  section.portfolio-samples_section img {
     width: 100%;
     background-color: gray; }
+  section.portfolio-samples_section:nth-child(odd) aside {
+    padding: 0 0.618rem 0 2.618rem; }
+  section.portfolio-samples_section:nth-child(even) aside {
+    padding: 0 2.618rem 0 0.618rem; }
 
 .about {
   background-color: #FFF;
@@ -630,13 +632,17 @@ header {
 .work-sample-links {
   clear: both; }
   .work-sample-links .button-dark {
+    clear: none;
     float: left;
+    display: inline-block;
     width: 100%;
     margin: 0 0 1% 0; }
     @media screen and (min-width: 800px) {
       .work-sample-links .button-dark {
-        width: 48%;
-        margin: 0 1% 0 0; } }
+        width: 49.5%;
+        margin: 0 1% 0 0; }
+        .work-sample-links .button-dark:last-child {
+          margin-right: 0; } }
 
 .graphicDesign {
   background-color: #E3DFDD; }

@@ -6,3 +6,11 @@ $largeScreen : 'screen and (min-width:800px)';
   }
 }
 
+@mixin transition($property: all, $duration: 0.4s, $timing-function: ease, $transition-delay: 0s) {
+	transition: $property $duration $timing-function $transition-delay;
+	-webkit-transition: $property $duration $timing-function $transition-delay;
+}
+
+@mixin border-box {
+	box-sizing: border-box;
+}

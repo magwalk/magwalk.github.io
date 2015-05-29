@@ -65,12 +65,17 @@
 .work-sample-links {
   clear:both;
   .button-dark {
+    clear: none;
     float:left;
+    display: inline-block;
     width: 100%;
     margin: 0 0 1% 0;
     @include breakpoint {
-      width: 48%;
+      width: 49.5%;
       margin: 0 1% 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

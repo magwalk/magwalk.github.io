@@ -1,23 +1,24 @@
 .button-dark {
   color: #FFF;
-  display: block;
   font-size: $normal;
   font-weight: 300;
+  line-height: $larger;
   letter-spacing: 2px;
-  padding-top: $tiny;
   background-color: $alphaColor;
   border-bottom: 4px solid darken($alphaColor, 15%);
   text-shadow: 1px 1px 0px darken($alphaColor, 15%);
   text-align: center;
-  vertical-align: center;
-  width: 100%;
   height: $larger;
-  clear:both;
+  transition: all 0.3s;
+  @include border-box;
   &:hover {
     background-color: darken($alphaColor, 15%);
-    border-bottom: 4px solid darken($alphaColor, 25%);
-    text-shadow: 1px 1px 0px darken($alphaColor, 15%);
-    transition: background-color 0.3s, border-bottom 0.3s, text-shadow 0.3s;
+    border-bottom: $larger solid darken($alphaColor, 15%);
 
+  }
+  &.full-width {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
