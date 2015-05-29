@@ -448,6 +448,7 @@ nav {
     text-shadow: 2px 2px 0px #634B65; }
 
 .button-dark {
+  display: inline-block;
   color: #FFF;
   font-size: 1rem;
   font-weight: 300;
