@@ -295,7 +295,7 @@ html .clearfix, *:first-child + html .clearfix {
   content: "\e611"; }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -476,7 +476,7 @@ nav {
   background-position: center top;
   background-attachment: fixed;
   position: relative;
-  height: 450px; }
+  height: 370px; }
   @media screen and (min-width: 800px) {
     .background-img, .portfolio-background-img {
       height: 560px; } }
