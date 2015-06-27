@@ -1,15 +1,8 @@
 $(document).ready(function(){
   //Mobile Nav Show/Hide Function
-
   $portfolioNav = $('.portfolio-background-img nav');
-  $counter = 0;
   $('.nav-icon').click(function(){
     $('nav').toggleClass('expand');
-    if ($counter % 2 == 0) {
-      $portfolioNav.css('top', '-150%')
-    } else {
-      $portfolioNav.css('top', '0');
-    }
   });
 
   $('.lightbox-trigger').click(function(e) {
