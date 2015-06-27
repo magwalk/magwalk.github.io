@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //Mobile Nav Show/Hide Function
-  $portfolioNav = $('.portfolio-background-img nav');
   $('.nav-icon').click(function(){
+    console.log('clicked');
     $('nav').toggleClass('expand');
   });
 
@@ -14,11 +14,11 @@ $(document).ready(function(){
       //insert img tag with the clicked link's href as a src value
       $('#lightbox-content').html('<img src="' + image_href + '"/>');
       //show lightbox window -- add transition here
-      $('#lightbox').show();
+      $('#lightbox').fadeIn();
     } else { //lightbox does not exist
       //Create HTML markup for lightbox window
       var lightbox =
-      '<div id="lightbox">' +
+      '<div id="lightbox" style="display:none">' +
         '<p>Click to close</p>' +
         '<div id="lightbox-content">' + //insert clicked link's href into img src
           '<img src="' + image_href +'" />' +
@@ -27,10 +27,11 @@ $(document).ready(function(){
 
       //insert lightbox HTML into page
       $('body').append(lightbox);
+      $('#lightbox').fadeIn();
     }
     $("#lightbox").click(function() { //must use live, as the lightbox element is inserted into the DOM
       console.log('clicked');
-      $('#lightbox').hide();
+      $('#lightbox').fadeOut();
     });
   });
   //Click anywhere on the page to get rid of lightbox window

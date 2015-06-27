@@ -1,11 +1,13 @@
 .portfolio-background-img {
   @extend .background-img;
-  background-image: url("../img/bg-portfolio.jpg");
-  height: 200px;
-  background-position: center -100px;
-  background-size: auto;
+  background: url("../img/bg-portfolio.jpg") no-repeat;
+  height: 290px;
+  background-position: center 0;
+  background-size: auto 460px;
   @include breakpoint {
     height: 400px;
+    background-position: center -100px;
+    background-size: auto;
   }
 }
 

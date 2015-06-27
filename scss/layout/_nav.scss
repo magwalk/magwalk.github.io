@@ -19,6 +19,9 @@ nav {
   @include breakpoint {
     top: 0;
   }
+  &.expand {
+    top: 0;
+  }
 }
 
 
@@ -33,6 +36,7 @@ nav {
   top: 0;
   right: $normal;
   z-index: 3;
+  cursor: pointer;
   @include breakpoint {
     display: none;
   }
