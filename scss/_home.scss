@@ -1,5 +1,5 @@
 // Unique header for homepage
-.background-img {
+.hero-bg-img {
   width: 100%;
   background-image: url("../img/bg3.jpg");
   background-size: auto 100%;
@@ -7,101 +7,100 @@
   background-attachment: fixed;
   position: relative;
   height: 370px;
+
   @include breakpoint {
     height: 560px;
   }
 }
 
-
-header{
+// MAIN HERO TEXT
+.hero-text {
   width: 100%;
   color: #FFF;
+
   @include breakpoint {
     margin-top: $gigantic;
   }
 }
 
-.header-logo {
+.hero-text__logo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: $normal;
   float: none;
-   a {
-  display: inline-block;
-  width: $gigantic;
-  height: $gigantic;
-  z-index: 5;
 
+  a {
+    display: inline-block;
+    width: $gigantic;
+    height: $gigantic;
+    z-index: 5;
   }
+
   img {
-  display: inline-block;
-  width: $gigantic;
+    display: inline-block;
+    width: $gigantic;
   }
 }
 
-.header-blurb {
+.hero-text__blurb{
   text-align: center;
   margin: 0 auto;
   float: none;
+
   h1, li {
     letter-spacing: 1px;
     font-weight: 300;
     line-height: $larger;
+
     @include breakpoint {
       line-height: $huge;
     }
   }
+
   h1 {
     color: #FFF;
+
     @include breakpoint {
       font-size: $larger;
     }
   }
 }
-.header-blurb li {
-  color: $deltaColorCharlie;
-}
 
+// Main Section Wrapper
 .content {
   width: 100%;
   position: relative;
   padding: $larger 0;
   text-align: center;
 }
-.content-p {
-  margin-bottom: $larger;
-}
-.content-heading {
-  padding-bottom: $normal;
-}
-.process {
-  @extend .grid_4;
-  margin-bottom: $normal;
-}
-.heading-icon {
+
+// Tan Centered Section Heading with Purple Icon
+.heading__icon {
   color: $alphaColorBeta;
   vertical-align: sub;
   font-size: $normal;
   margin-bottom: $small;
-}
-.heading-icon span {
-  color: $betaColor;
-  vertical-align: baseline;
-}
-.process-text {
-  text-align: center;
+
+  span {
+    color: $betaColor;
+    vertical-align: baseline;
+  }
 }
 
+// Portfolio Sample -- Large Image with Text Block and CTAs
 .portfolio-samples {
   background-color: $betaColorBeta;
-  .heading-icon {
+
+  .heading__icon {
     margin-bottom: $larger;
   }
 }
 
-section.portfolio-samples_section {
+// Individual Portfolio Samples w/in .portfolio-samples
+.portfolio-samples__section {
   margin-bottom: $larger;
+
   h2 {
     margin-bottom: $small;
     font-size: $normal;
@@ -111,21 +110,22 @@ section.portfolio-samples_section {
       font-size: $normal;
     }
   }
+
   figure {
     overflow: hidden;
   }
+
   img {
     width: 100%;
     background-color: gray;
-    @include breakpoint {
-
-    }
   }
+
   &:nth-child(odd) {
     aside {
       padding: 0 $small 0 $larger;
     }
   }
+
   &:nth-child(even) {
     aside {
       padding: 0 $larger 0 $small;
@@ -133,11 +133,27 @@ section.portfolio-samples_section {
   }
 }
 
-
+// About Section
 .about {
   background-color: #FFF;
   text-align: left;
+
+  p {
+    margin: 0 auto $normal;
+    width: 80%;
+    max-width: 700px;
+  }
 }
-.about img {
-  width: 100%;
+
+.about__photo {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.about__heading {
+  margin-bottom: $normal;
+  text-align: center;
 }

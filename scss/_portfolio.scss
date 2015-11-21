@@ -1,9 +1,11 @@
-.portfolio-background-img {
-  @extend .background-img;
+// Unique header for portfolio page
+.hero-bg-img__portfolio {
+  @extend .hero-bg-img;
   background: url("../img/bg-portfolio.jpg") no-repeat;
   height: 290px;
   background-position: center 0;
   background-size: auto 460px;
+
   @include breakpoint {
     height: 400px;
     background-position: center -100px;
@@ -11,6 +13,8 @@
   }
 }
 
+// WORK SAMPLES
+// Wrapper for each portfolio piece 
 .work-sample {
   margin-top: $larger;
   clear: both;
@@ -19,14 +23,19 @@
   }
 }
 
-.work-sample-img img {
+// Main image for .work-sample
+.work-sample__img img {
   width: 100%;
 }
-.work-sample-thumbnails {
+
+// List of thumbnails in .work-sample
+.work-sample__thumnails {
   display: none;
+
   @include breakpoint {
     display: block;
   }
+
   li {
     @extend .grid_3;
     overflow: hidden;
@@ -35,25 +44,29 @@
     &:nth-child(4n+1) {
       @extend .alpha;
     }
+
     &:nth-child(4n) {
       @extend .omega;
    }
+
     img {
       width: 100%;
     }
   }
 }
-.work-sample-thumbnails_title {
+.work-sample__thumnails__title {
   display: none;
+
   @include breakpoint {
     display: block;
   }
 }
 
-.work-sample-tags {
+.work-sample__tags {
   font-weight: 700;
   color: $betaColor;
   line-height: $large;
+
   span {
     background-color: lighten($betaColor, 10%);
     font-weight: 300;
@@ -64,8 +77,10 @@
   }
 }
 
-.work-sample-links {
+// "View Demo" and "View on Github" links
+.work-sample__links {
   clear:both;
+
   .button-dark {
     clear: none;
     float:left;
@@ -82,44 +97,31 @@
   }
 }
 
-.graphicDesign {
+//Alternating background colors for portfolio content
+.content__portfolio:nth-child(odd) {
   background-color: $betaColorBeta;
 }
 
-.performanceArt {
-  li:nth-child(6n+1) {
-    @extend .alpha;
-  }
-  li:nth-child(6n) {
-    @extend .omega;
-  }
-  li {
-    @extend .grid_2;
-    overflow: hidden;
-    height: $gigantic;
-  }
-  img {
-    width: 125%;
-  }
-}
-
+// LIGHTBOX
 #lightbox {
-    position:fixed;
-    overflow-y: scroll;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(0,0,0,0.7);
-    text-align:center;
-}
-#lightbox p {
-    text-align:right;
-    color:#fff;
-    margin-right:20px;
-    font-size:12px;
-}
-#lightbox img {
-    border: $tiny solid #FFF;
-    max-height: 700px;
+  position:fixed;
+  overflow-y: scroll;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.7);
+  text-align:center;
+
+  p {
+      text-align:right;
+      color:#fff;
+      margin-right:20px;
+      font-size:12px;
+  }
+
+  img {
+      border: $tiny solid #FFF;
+      max-height: 700px;
+  }
 }

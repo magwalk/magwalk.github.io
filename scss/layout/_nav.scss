@@ -1,5 +1,5 @@
 
-nav {
+#nav-main {
   position: absolute;
   width: 100%;
   top: -100%;
@@ -14,7 +14,7 @@ nav {
   }
 }
 
-.portfolio-background-img nav {
+.portfolio-background-img #nav-main {
   top: -150%;
   @include breakpoint {
     top: 0;
@@ -46,17 +46,20 @@ nav {
   width: 100%;
 }
 
-.nav-list {
+.nav-main__list {
   width: 100%;
   margin-top: $larger;
   text-align: left;
 }
 
-.nav-list_item, .nav-list_item_sub {
+.nav-main__li {
   background-color: $betaColorBeta;
   border-bottom: 1px solid #FFF;
   padding: 0 $normal;
   line-height: $larger;
+  &:not(.social-media):hover {
+    @include animate-hoverWave;
+  }
   &:hover {
     background-color: darken($betaColorBeta, 10%);
     text-shadow: 1px 1px 0px darken($betaColor, 10%);
@@ -76,23 +79,19 @@ nav {
     }
   }
 }
-.nav-list a {
+.nav-main__list a {
   color: $betaColor;
   padding: $tiny;
   @include breakpoint {
     color: $deltaColorCharlie;
   }
-}
 
-.nav-list_item_sub a {
-  font-weight: 300;
-  padding-left: 33px;
-  @include breakpoint {
-    line-height: $large;
+  &:hover {
+    @include animate-hoverWave;
   }
 }
 
-.nav-list_item {
+.nav-main__li {
   width: 100%;
   float: left;
   display: block;
@@ -102,41 +101,6 @@ nav {
   }
 }
 
-.nav-list_item_sub {
-  background-color: rgba(255,255,255,0);
-  @include breakpoint {
-    text-align: left;
-    padding-left: 10%;
-    display: block;
-  }
-}
-.first {
-  @include breakpoint {
-    margin-top: $small;
-  }
-}
-.nav-list_sub {
-  @include breakpoint {
-    width: 23.5%;
-    position: absolute;
-    visibility: hidden;
-    color: #FFF;
-    text-shadow: none;
-    text-align: left;
-  }
-}
-
-.portfolio {
-  @include breakpoint {
-    background-color: rgba(255,255,255,0);
-    &:hover{
-      .nav-list_sub {
-        visibility: visible;
-        transition: visibility 0.5s;
-      }
-    }
-  }
-}
 .social-media {
   text-align: center;
   &:hover {

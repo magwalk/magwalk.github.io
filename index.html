@@ -11,33 +11,33 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
   <body>
-    <div class="background-img clearfix">
+    <div class="hero-bg-img clearfix">
       <div class="nav-icon">
           <img src="img/nav-icon.svg"/>
       </div>
-      <nav class="nav-container">
-        <ul class="nav-list">
-          <li class="nav-list_item icon-images alpha portfolio">
+      <nav id="nav-main">
+        <ul class="nav-main__list">
+          <li class="nav-main__li icon-images alpha portfolio">
             <a href="portfolio.html">
               Portfolio
             </a>
           </li>
-          <li class="nav-list_item icon-user">
+          <li class="nav-main__li icon-user">
             <a href="#about">
               Who I am
             </a>
           </li>
-          <li class="nav-list_item icon-profile">
+          <li class="nav-main__li icon-profile">
             <a href="resume-MaggieWalker.pdf">
               Resume
             </a>
           </li>
-          <li class="nav-list_item icon-envelope">
+          <li class="nav-main__li icon-envelope">
             <a href="#contact">
               Contact
             </a>
           </li>
-          <li class="nav-list_item social-media omega">
+          <li class="nav-main__li social-media omega">
             <a href="http://www.linkedin.com/in/magwalk">
               <span class="icon-linkedin social-media_icon">&nbsp;</span>
             </a>
@@ -51,102 +51,31 @@
         </ul>
       </nav>
       <div class="container clearfix">
-      <header>
-          <div class="header-logo grid_2">
+      <header class="hero-text">
+          <div class="hero-text__logo grid_2">
             <a href="index.html">
               <img src="img/logo-mw-white.svg"/>
             </a>
           </div>
-          <div class="header-blurb grid_12">
+          <div class="hero-text__blurb grid_12">
             <h1>
               Hi, I'm Maggie Walker.<br>
-              I am a User Experience Designer<br>
-              &amp; Front-End Web Developer.<br>
+              I am a Front-End Web Developer.<br>
             </h1>
           </div>
         </header>
       </div>
     </div>
-    <div class="content clearfix">
-      <div class="container clearfix">
-        <h1 class="content-heading">
-          My Process : Creating Ease and Efficiency in Web Experiences
-        </h1>
-        <p class="content-p">
-
-        </p>
-        <section class="process alpha">
-          <h1 class="heading-icon icon-warning">
-            <span>
-              Stimulus
-            </span>
-          </h1>
-          <p class="process-text">
-            There is a given user problem and the decision is made to fix said problem.
-          </p>
-        </section>
-        <section class="process">
-          <h1 class="heading-icon icon-search">
-            <span>
-              Assess
-            </span>
-          </h1>
-          <p class="process-text">
-            Look at all aspects of the problem. Research target audience, user scenarios, and competition.
-          </p>
-        </section>
-        <section class="process omega">
-          <h1 class="heading-icon icon-pencil">
-            <span>
-              Brainstorm
-            </span>
-          </h1>
-          <p class="process-text">
-            Sketch (a lot), wireframe, prototype. Determine possible visual &amp; architectural solutions.
-          </p>
-        </section>
-        <section class="process alpha">
-          <h1 class="heading-icon icon-images">
-            <span>
-              Solution (MVP)
-            </span>
-          </h1>
-          <p class="process-text">
-            Production of the minimal viable product. Best solutions to core features are polished.
-          </p>
-        </section>
-        <section class="process">
-          <h1 class="heading-icon icon-users">
-            <span>
-              Testing
-            </span>
-          </h1>
-          <p class="process-text">
-            Possibly the most important part of the process is testing your UI with actual users and making necessary changes.
-          </p>
-        </section>
-        <section class="process omega">
-          <h1 class="heading-icon icon-mobile">
-            <span>
-              Final Product
-            </span>
-          </h1>
-          <p class="process-text">
-            Cycle through all previous steps until product has all desired features. Then off to market!
-          </p>
-        </section>
-      </div>
-    </div>
     <div class="content portfolio-samples clearfix">
       <div class="container clearfix">
-        <h1 class="heading-icon icon-images">
+        <h1 class="heading__icon icon-images">
           <span>
             Work Samples
           </span>
         </h1>
-        <section class="portfolio-samples_section clearfix">
+        <section class="portfolio-samples__section clearfix">
           <figure class="grid_4 alpha">
-            <img src="img/portfolio-img/fitgenie-style.png" class="portfolio-samples_img"/>
+            <img src="img/portfolio-img/fitgenie-style.png" class="portfolio-samples__img"/>
           </figure>
           <aside class="grid_8 omega">
             <h2>
@@ -157,7 +86,7 @@
             </p>
           </aside>
         </section>
-        <section class="portfolio-samples_section clearfix">
+        <section class="portfolio-samples__section clearfix">
           <aside class="grid_8 alpha">
             <h2>
               Living Style Guide
@@ -167,7 +96,7 @@
             </p>
           </aside>
           <figure class="grid_4 omega">
-            <img src="img/portfolio-img/LSG-screenshot.jpg" class="portfolio-samples_img"/>
+            <img src="img/portfolio-img/LSG-screenshot.jpg" class="portfolio-samples__img"/>
           </figure>
         </section>
         <a href="portfolio.html" class="button-dark full-width">VIEW FULL PORTFOLIO >></A>
@@ -175,11 +104,11 @@
     </div>
     <div id="about" class="content about">
       <div class="container">
-        <figure class="grid_4 alpha">
-          <img src="img/headshot.jpg"/>
+        <figure class="grid_12">
+          <img class="about__photo" src="img/headshot.jpg"/>
         </figure>
-        <section class="grid_8 omega">
-          <h1>
+        <section class="grid_12">
+          <h1 class="about__heading">
             About Me
           </h1>
           <p>
