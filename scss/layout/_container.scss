@@ -1,7 +1,7 @@
 .container {
   width: 90%;
   margin: 0 auto;
-  overflow: hidden;
+
   @mixin breakpoint {
     width:80%;
   }

@@ -14,3 +14,49 @@ $largeScreen : 'screen and (min-width:800px)';
 @mixin border-box {
 	box-sizing: border-box;
 }
+
+// Top and Bottom Angled Layout
+@mixin top-angle {
+  position: relative;
+
+  &:before {
+    background: inherit;
+    top: -40px;
+    content: '';
+    display: block;
+    height: 155px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-4.5deg);
+    transform-origin: 50%;
+    z-index: -1;
+
+    @media (min-width: 775px) {
+      top: -67px;
+    }
+  }
+}
+
+@mixin bottom-angle {
+  position: relative;
+
+  &:after {
+    background: inherit;
+    bottom: -111px;
+    content: '';
+    display: block;
+    height: 155px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(4.5deg);
+    transform-origin: 50%;
+    z-index: -1;
+
+    @media (min-width: 775px) {
+      bottom: -78px;
+
+    }
+  }
+}

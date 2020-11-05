@@ -1,6 +1,6 @@
 // Unique header for portfolio page
 .hero-bg-img__portfolio {
-  @extend .hero-bg-img;
+
   background: url("../img/bg-portfolio.jpg") no-repeat;
   height: 290px;
   background-position: center 0;
@@ -14,7 +14,7 @@
 }
 
 // WORK SAMPLES
-// Wrapper for each portfolio piece 
+// Wrapper for each portfolio piece
 .work-sample {
   margin-top: $larger;
   clear: both;

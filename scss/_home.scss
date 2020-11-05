@@ -1,159 +1,537 @@
-// Unique header for homepage
-.hero-bg-img {
+.body {
+  background: $black;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+// HERO BANNER
+.hero {
   width: 100%;
-  background-image: url("../img/bg3.jpg");
-  background-size: auto 100%;
+  padding: 170px 0;
+  background-image: url("../img/hero-bg.jpeg");
+  background-size: 100% auto;
   background-position: center top;
-  background-attachment: fixed;
   position: relative;
-  height: 370px;
-
-  @include breakpoint {
-    height: 560px;
-  }
-}
-
-// MAIN HERO TEXT
-.hero-text {
-  width: 100%;
-  color: #FFF;
-
-  @include breakpoint {
-    margin-top: $gigantic;
-  }
-}
-
-.hero-text__logo {
-  width: 50%;
-  margin: 0 auto;
   text-align: center;
-  padding-top: $normal;
-  float: none;
 
-  a {
-    display: inline-block;
-    width: $gigantic;
-    height: $gigantic;
-    z-index: 5;
-  }
-
-  img {
-    display: inline-block;
-    width: $gigantic;
-  }
-}
-
-.hero-text__blurb{
-  text-align: center;
-  margin: 0 auto;
-  float: none;
-
-  h1, li {
-    letter-spacing: 1px;
-    font-weight: 300;
-    line-height: $larger;
-
-    @include breakpoint {
-      line-height: $huge;
-    }
-  }
-
-  h1 {
-    color: #FFF;
-
-    @include breakpoint {
-      font-size: $larger;
-    }
-  }
-}
-
-// Main Section Wrapper
-.content {
-  width: 100%;
-  position: relative;
-  padding: $larger 0;
-  text-align: center;
-}
-
-// Tan Centered Section Heading with Purple Icon
-.heading__icon {
-  color: $alphaColorBeta;
-  vertical-align: sub;
-  font-size: $normal;
-  margin-bottom: $small;
-
-  span {
-    color: $betaColor;
-    vertical-align: baseline;
-  }
-}
-
-// Portfolio Sample -- Large Image with Text Block and CTAs
-.portfolio-samples {
-  background-color: $betaColorBeta;
-
-  .heading__icon {
-    margin-bottom: $larger;
-  }
-}
-
-// Individual Portfolio Samples w/in .portfolio-samples
-.portfolio-samples__section {
-  margin-bottom: $larger;
-
-  h2 {
-    margin-bottom: $small;
-    font-size: $normal;
-    color: $alphaColor;
+  @media (min-width: 775px) {
+    padding: 230px 0;
     text-align: left;
-    @include breakpoint {
-      font-size: $normal;
-    }
+  }
+}
+
+.hero--heading {
+  display: inline-block;
+  font-weight: normal;
+
+  font-size: 22px;
+  line-height: 36px;
+
+  @media (min-width: 775px) and (max-width: 1059px) {
+    margin: 0;
+    font-size: 33px;
+    line-height: 46px;
   }
 
-  figure {
+  @media (min-width: 1060px) {
+
+    font-size: 48px;
+    line-height: 76px;
+  }
+}
+
+.hero--box {
+  display: inline-block;
+  padding: 0 20px;
+  background: white;
+  color: $black;
+  font-size: inherit;
+  vertical-align: bottom;
+  font-style: normal;
+  text-align: center;
+
+  width: calc(100% - 59px);
+
+  @media (min-width: 775px) and (max-width: 1059px) {
+    width: calc(100% - 85px);
+  }
+
+  @media (min-width: 1060px) {
+    width: calc(100% - 120px);
+  }
+
+  & > span {
+    display: block;
+    margin: 0 auto;
+    font-size: inherit;
     overflow: hidden;
+    white-space: nowrap;
+    animation-duration: 2.1s;
+    animation-name: wipe;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes wipe {
+  from {
+    width: 0;
   }
 
-  img {
+  60% {
     width: 100%;
-    background-color: gray;
   }
 
-  &:nth-child(odd) {
-    aside {
-      padding: 0 $small 0 $larger;
-    }
-  }
-
-  &:nth-child(even) {
-    aside {
-      padding: 0 $larger 0 $small;
-    }
+  to {
+    width: 100%;
   }
 }
 
-// About Section
-.about {
-  background-color: #FFF;
-  text-align: left;
 
-  p {
-    margin: 0 auto $normal;
-    width: 80%;
-    max-width: 700px;
-  }
-}
-
-.about__photo {
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  max-width: 150px;
-  border-radius: 50%;
-}
-
-.about__heading {
-  margin-bottom: $normal;
+// SECTIONS
+.section {
   text-align: center;
 }
+
+.section__portfolio {
+  background: $cream;
+
+  @include top-angle;
+  @include bottom-angle;
+
+  @media (min-width: 775px) {
+    padding-bottom: 50px;
+  }
+}
+
+.section--heading {
+  position: relative;
+  top: -58px;
+  z-index: 10;
+  display: inline-block;
+  background: $white;
+  border: 1px solid $black;
+  padding: 10px;
+  min-width: 300px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+
+  @media (min-width: 775px) {
+    top: -92px;
+    font-size: 24px;
+    line-height: 30px;
+    min-width: 300px;
+  }
+}
+
+// PORTFOLIO SECTION
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+}
+
+.portfolio-item--img {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+  -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+}
+
+
+.portfolio-item {
+  position: relative;
+  width: 100%;
+  padding: 80px 10px;
+  margin-bottom: 2%;
+  background: $grey;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  color: $white;
+
+  @media (min-width: 500px) and (max-width: 899px) {
+    width: 49%;
+  }
+
+  @media (min-width: 900px) {
+    width: 32%;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    & > .portfolio-item--img {
+      opacity: 0.2;
+    }
+  }
+}
+
+.portfolio-item--text {
+  position: relative;
+  z-index: 2;
+
+  font-size: 14px;
+
+  @media (min-width: 900px) {
+    font-size: 18px;
+  }
+}
+
+// BUTTON
+// TODO: MOVE THIS
+.button {
+  display: inline-block;
+  border: 1px solid $grey;
+  background: transparent;
+  color: $grey;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  font-size: 14px;
+
+  @media (min-width: 775px) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $grey;
+    color: $cream;
+
+  }
+}
+
+// ABOUT SECTION
+.section__about {
+  padding: 150px 0 100px;
+  background: $grey;
+
+  @media (min-width: 775px) {
+    padding-bottom: 220px;
+  }
+}
+
+.section__about--img {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  vertical-align: top;
+  -webkit-clip-path: polygon(93% 0%, 0% 0%, 7% 100%, 100% 100%);
+  clip-path: polygon(93% 0%, 0% 0%, 7% 100%, 100% 100%);
+
+  @media (min-width: 775px) {
+    float: none;
+    width: 40%;
+    margin-right: 5%;
+  }
+}
+
+.section__about--text-wrap {
+  padding-top: 30px;
+
+  @media (min-width: 775px) {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 90px;
+    padding-top: 0;
+  }
+}
+
+.section__about--text {
+  font-size: 14px;
+
+  & > em {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+// MODAL
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba($grey, 0.2);
+}
+
+.modal-wrap {
+  background: $white;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+  width: 95%;
+  max-width: 1300px;
+  padding: 10px;
+  border: 1px solid $grey;
+  text-align: center;
+
+  &:before {
+    background: inherit;
+    top: -53px;
+    content: '';
+    display: block;
+    height: 235px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-4.5deg);
+    transform-origin: 50%;
+    z-index: 1000;
+    background: $grey;
+  }
+}
+
+.modal--close {
+  display: inline-block;
+  position: fixed;
+  top: 10px;
+  right: calc(2.5% - 10px);
+  font-size: 12px;
+  line-height: 12px;
+  background: #777068;
+  padding: 10px;
+  z-index: 1001;
+  color: $cream;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:focus,
+  &:active {
+    border: 1px solid $cream;
+    outline: none;
+  }
+
+  @media (min-width: 1365px) {
+    // calculates position of right edge of modal
+    right: calc((100vw - 1300px)/ 2 - 10px);
+  }
+}
+
+.modal--heading {
+  position: relative;
+  margin-top: 40px;
+  z-index: 1001;
+  color: $white;
+
+  & + .modal--img {
+    margin-top: 20px;
+  }
+}
+
+.modal--subhead {
+  margin: 60px 0 40px;
+}
+
+.modal--heading-text {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1001;
+  color: $white;
+
+  & > a {
+    font-size: inherit;
+  }
+}
+
+.modal--img {
+  position: relative;
+  z-index: 1001;
+  border: 1px solid $grey;
+  max-width: 100%;
+  vertical-align: top;
+  margin-bottom: 10px;
+
+  &.small {
+    width: 600px;
+  }
+}
+
+
+
+
+// // Unique header for homepage
+// .hero-bg-img {
+//   width: 100%;
+//   background-image: url("../img/bg3.jpg");
+//   background-size: auto 100%;
+//   background-position: center top;
+//   background-attachment: fixed;
+//   position: relative;
+//   height: 370px;
+
+//   @include breakpoint {
+//     height: 560px;
+//   }
+// }
+
+// // MAIN HERO TEXT
+// .hero-text {
+//   width: 100%;
+//   color: #FFF;
+
+//   @include breakpoint {
+//     margin-top: $gigantic;
+//   }
+// }
+
+// .hero-text__logo {
+//   width: 50%;
+//   margin: 0 auto;
+//   text-align: center;
+//   padding-top: $normal;
+//   float: none;
+
+//   a {
+//     display: inline-block;
+//     width: $gigantic;
+//     height: $gigantic;
+//     z-index: 5;
+//   }
+
+//   img {
+//     display: inline-block;
+//     width: $gigantic;
+//   }
+// }
+
+// .hero-text__blurb{
+//   text-align: center;
+//   margin: 0 auto;
+//   float: none;
+
+//   h1, li {
+//     letter-spacing: 1px;
+//     font-weight: 300;
+//     line-height: $larger;
+
+//     @include breakpoint {
+//       line-height: $huge;
+//     }
+//   }
+
+//   h1 {
+//     color: #FFF;
+
+//     @include breakpoint {
+//       font-size: $larger;
+//     }
+//   }
+// }
+
+// // Main Section Wrapper
+// .content {
+//   width: 100%;
+//   position: relative;
+//   padding: $larger 0;
+//   text-align: center;
+// }
+
+// // Tan Centered Section Heading with Purple Icon
+// .heading__icon {
+//   color: $alphaColorBeta;
+//   vertical-align: sub;
+//   font-size: $normal;
+//   margin-bottom: $small;
+
+//   span {
+//     color: $betaColor;
+//     vertical-align: baseline;
+//   }
+// }
+
+// // Portfolio Sample -- Large Image with Text Block and CTAs
+// .portfolio-samples {
+//   background-color: $betaColorBeta;
+
+//   .heading__icon {
+//     margin-bottom: $larger;
+//   }
+// }
+
+// // Individual Portfolio Samples w/in .portfolio-samples
+// .portfolio-samples__section {
+//   margin-bottom: $larger;
+
+//   h2 {
+//     margin-bottom: $small;
+//     font-size: $normal;
+//     color: $alphaColor;
+//     text-align: left;
+//     @include breakpoint {
+//       font-size: $normal;
+//     }
+//   }
+
+//   figure {
+//     overflow: hidden;
+//   }
+
+//   img {
+//     width: 100%;
+//     background-color: gray;
+//   }
+
+//   &:nth-child(odd) {
+//     aside {
+//       padding: 0 $small 0 $larger;
+//     }
+//   }
+
+//   &:nth-child(even) {
+//     aside {
+//       padding: 0 $larger 0 $small;
+//     }
+//   }
+// }
+
+// // About Section
+// .about {
+//   background-color: #FFF;
+//   text-align: left;
+
+//   p {
+//     margin: 0 auto $normal;
+//     width: 80%;
+//     max-width: 700px;
+//   }
+// }
+
+// .about__photo {
+//   display: block;
+//   margin: 0 auto;
+//   width: 80%;
+//   max-width: 150px;
+//   border-radius: 50%;
+// }
+
+// .about__heading {
+//   margin-bottom: $normal;
+//   text-align: center;
+// }
