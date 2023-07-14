@@ -44,7 +44,6 @@ $(document).ready(function(){
 
 
 
-
     // //Checks to see if the lightbox div exists
     // if ($('#lightbox').length > 0) {
     //   //insert img tag with the clicked link's href as a src value
@@ -70,4 +69,8 @@ $(document).ready(function(){
     // });
   });
   //Click anywhere on the page to get rid of lightbox window
+
+  // Current year in footer
+  var thisYear = new Date().getFullYear();
+  $('#thisYear').text(thisYear);
 });
