@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Hero banner animation
-  var roles = ['a frontend dev', 'a designer', 'an artist', 'a creator'];
+  var roles = ['a designer', 'a frontend dev', 'an artist', 'a creator'];
   var $heroText = $('#hero--box');
   var heroTextIndex = 1;
   var heroTimer = window.setInterval(changeHeroText, 2100);
