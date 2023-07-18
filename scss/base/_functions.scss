@@ -10,7 +10,8 @@ $cols : 12; //Sets # of columns
 
 //Sets width of each column
 @function findColumnWidth($cols) {
-  $result : ((100 - ( 2 * ($cols - 1))) / $cols);
+  // $result : ((100 - ( 2 * ($cols - 1))) / $cols);
+  $result : calc((100 - (2 * ($cols - 1))) / $cols);
   @return $result;
 }
 
